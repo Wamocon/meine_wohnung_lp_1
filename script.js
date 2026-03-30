@@ -333,7 +333,26 @@
         });
     }
 
-    /* ── 11. LANGUAGE TOGGLE (DE / EN) ── */
+    /* ── 11. LEGAL TABS ── */
+    function initLegalTabs() {
+        var tabs = $$('.legal-tab[data-legal-target]');
+        if (!tabs.length) return;
+
+        function show(target) {
+            tabs.forEach(function (tab) {
+                tab.classList.toggle('legal-tab--active', tab.dataset.legalTarget === target);
+            });
+            $$('.legal-panel').forEach(function (panel) {
+                panel.classList.toggle('legal-panel--active', panel.id === ('legal-' + target));
+            });
+        }
+
+        tabs.forEach(function (tab) {
+            tab.addEventListener('click', function () { show(tab.dataset.legalTarget); });
+        });
+    }
+
+    /* ── 12. LANGUAGE TOGGLE (DE / EN) ── */
     function initLangToggle() {
         var btn = document.getElementById('langToggle');
         if (!btn) return;
@@ -342,6 +361,8 @@
         function apply(lang) {
             currentLang = lang;
             localStorage.setItem('mw_lang', lang);
+            document.documentElement.lang = lang;
+            document.body.dataset.lang = lang;
             btn.textContent = lang === 'de' ? 'EN' : 'DE';
             $$('[data-de]').forEach(function (el) {
                 el.textContent = lang === 'de' ? el.dataset.de : el.dataset.en;
@@ -370,6 +391,7 @@
         initMobileMenu();
         initBackToTop();
         initCookie();
+        initLegalTabs();
         initLangToggle();
     });
 })();

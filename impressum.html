@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum | Meine Wohnung</title>
+  <meta name="description" content="Impressum von Meine Wohnung / WAMOCON GmbH.">
+  <meta name="theme-color" content="#1e40af">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    :root {
+      --color-bg: #f7f9fd;
+      --color-text-main: #0f172a;
+      --font-sans: 'Manrope', system-ui, sans-serif;
+    }
+    body { font-family: var(--font-sans); background: var(--color-bg); color: var(--color-text-main); }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased leading-relaxed" data-lang="de">
+
+  <nav class="fixed top-0 left-0 right-0 z-50 h-16 flex items-center transition-all duration-400 nav-scrolled" id="nav">
+    <div class="w-full max-w-[1100px] mx-auto px-5 md:px-10 flex items-center justify-between gap-3">
+      <a href="index.html" style="font-size:1.2rem;font-weight:900;letter-spacing:-0.03em;color:#1e40af;text-decoration:none;">MEINE WOHNUNG</a>
+      <div class="flex items-center gap-3">
+        <button id="langToggle" aria-label="Toggle language">EN</button>
+        <div class="nav-links-pill">
+          <a href="index.html" class="nav-link" data-de="Startseite" data-en="Home">Startseite</a>
+          <a href="impressum.html" class="nav-link nav-link--active" data-de="Impressum" data-en="Imprint">Impressum</a>
+          <a href="datenschutz.html" class="nav-link" data-de="Datenschutz" data-en="Privacy">Datenschutz</a>
+          <a href="agb.html" class="nav-link" data-de="AGB" data-en="Terms">AGB</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="legal-page-main">
+    <div class="legal-page-wrap">
+      <div class="legal-page-head">
+        <h1 data-de="Impressum" data-en="Imprint">Impressum</h1>
+        <p data-de="Rechtliche Anbieterkennzeichnung" data-en="Legal provider identification">Rechtliche Anbieterkennzeichnung</p>
+      </div>
+
+      <section class="legal-content-card">
+        <div class="lang-de">
+          <h2>Impressum</h2>
+          <p><strong>Stand:</strong> Marz 2026</p>
+          <h3>WAMOCON GmbH</h3>
+          <p>Mergenthalerallee 79 - 81<br>65760 Eschborn<br>Deutschland</p>
+          <h3>Kontakt</h3>
+          <p>Telefon: +49 6196 5838311<br>E-Mail: info@wamocon.com<br>Projektkontakt Ustafix.app: info@ustafix.app</p>
+          <h3>Vertretungsberechtigter Geschaftsfuhrer</h3>
+          <p>Dipl.-Ing. Waleri Moretz</p>
+          <h3>Registereintrag</h3>
+          <p>Sitz der Gesellschaft: Eschborn<br>Handelsregister: Eschborn HRB 123666<br>Umsatzsteuer-Identifikationsnummer: DE344930486</p>
+          <h3>Angaben zum Angebot</h3>
+          <p>Ustafix.app ist eine webbasierte Software-as-a-Service-Plattform fur digitales Baustellen- und Mangelmanagement. Das Angebot richtet sich primar an Unternehmen, Bauleiter, Generalunternehmer, Handwerksbetriebe und projektbezogene Ausfuhrungsteams.</p>
+          <p><a href="impressum.md" class="legal-source-link" target="_blank" rel="noopener">Vollstandiger Wortlaut (Quelle)</a></p>
+        </div>
+
+        <div class="lang-en">
+          <h2>Imprint</h2>
+          <p><strong>Version:</strong> March 2026</p>
+          <h3>WAMOCON GmbH</h3>
+          <p>Mergenthalerallee 79 - 81<br>65760 Eschborn<br>Germany</p>
+          <h3>Contact</h3>
+          <p>Phone: +49 6196 5838311<br>Email: info@wamocon.com<br>Project contact Ustafix.app: info@ustafix.app</p>
+          <h3>Managing Director</h3>
+          <p>Dipl.-Ing. Waleri Moretz</p>
+          <h3>Commercial Register</h3>
+          <p>Registered office: Eschborn<br>Commercial register: Eschborn HRB 123666<br>VAT ID: DE344930486</p>
+          <h3>Service Information</h3>
+          <p>Ustafix.app is a web-based Software-as-a-Service platform for digital construction site and defect management. The service is primarily intended for companies, site managers, general contractors, skilled trade businesses, and project execution teams.</p>
+          <p><a href="impressum.md" class="legal-source-link" target="_blank" rel="noopener">Full German source text</a></p>
+          <p><strong>Note:</strong> The German version is authoritative.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
